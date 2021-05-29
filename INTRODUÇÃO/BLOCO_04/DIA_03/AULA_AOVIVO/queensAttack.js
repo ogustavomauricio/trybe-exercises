@@ -26,5 +26,10 @@ if((linhaOponente === linhaAtualRainha) && (colunaOponente === attackBemSucedido
 for( let iSupEsq = 1; iSupEsq < 8 iSupEsq += 1){
 	let linhaAtualRainha = linhaRainha + iSupEsq;
 	let colunaAtualRainha = colunaRainha - iSupEsq;
+
+	if((linhaAtualRainha > 8) || (colunaAtualRainha < 1)){
+		break;
+	}
+	
 }
 console.log("Ataque bem sucedido?" , attackBemSucedido)
