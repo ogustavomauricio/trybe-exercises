@@ -49,5 +49,15 @@ for(let iInfEsq = 1; iInfEsq < 8; iInfEsq += 1){
 
 }
 
-for(let iInfDir)
+for(let iInfDir = 1; iInfDir < 8 ; iInfDir +=1) {
+let linhaAtualRainha = linhaRainha - iInfDir;
+let colunaAtualRainha = colunaRainha + iInfDir;
+
+if((linhaAtualRainha < 1) || (colunaAtualRainha > 8)){
+	break;
+}
+if((linhaOponente === linhaAtualRainha) && (colunaOponente === attackBemSucedido)){
+	attackBemSucedido = true;
+
+}
 console.log("Ataque bem sucedido?" , attackBemSucedido)
