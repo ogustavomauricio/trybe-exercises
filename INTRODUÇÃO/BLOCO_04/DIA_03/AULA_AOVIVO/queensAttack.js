@@ -16,9 +16,9 @@ let linhaAtualRainha = linhaRainha + iSupDir;
 let colunaAtualRainha = colunaRainha + iSupDir;
 
 if((linhaAtualRainha > 8) || (colunaAtualRainha > 8)){
+	console.log(attackBemSucedido , " > Peça fora do tabuleiro")
 	break;
-}
-if((linhaOponente === linhaAtualRainha) && (colunaOponente === attackBemSucedido)){
+} else if((linhaOponente === linhaAtualRainha) && (colunaOponente === attackBemSucedido)){
 	attackBemSucedido = true;
 }
 }
@@ -28,10 +28,9 @@ for( let iSupEsq = 1; iSupEsq < 8; iSupEsq += 1){
 	let colunaAtualRainha = colunaRainha - iSupEsq;
 
 	if((linhaAtualRainha > 8) || (colunaAtualRainha < 1)){
+		console.log(attackBemSucedido , " > Peça fora do tabuleiro")
 		break;
-	}
-
-	if((linhaOponente === linhaAtualRainha) && (colunaOponente === attackBemSucedido)){
+	} else	if((linhaOponente === linhaAtualRainha) && (colunaOponente === attackBemSucedido)){
 		attackBemSucedido = true;
 
 }
@@ -41,12 +40,11 @@ for(let iInfEsq = 1; iInfEsq < 8; iInfEsq += 1){
 	let colunaAtualRainha = colunaRainha - iInfEsq;
 
 	if((linhaAtualRainha < 1) || (colunaAtualRainha < 1)){
+		console.log(attackBemSucedido , " > Peça fora do tabuleiro")
 		break;
-	}
-
-	if((linhaOponente === linhaAtualRainha) && (colunaOponente === attackBemSucedido)){
+		} else if((linhaOponente === linhaAtualRainha) && (colunaOponente === attackBemSucedido)){
 		attackBemSucedido = true;
-
+	}
 }
 
 for(let iInfDir = 1; iInfDir < 8 ; iInfDir +=1) {
@@ -54,10 +52,10 @@ let linhaAtualRainha = linhaRainha - iInfDir;
 let colunaAtualRainha = colunaRainha + iInfDir;
 
 if((linhaAtualRainha < 1) || (colunaAtualRainha > 8)){
+	console.log(attackBemSucedido , " > Peça fora do tabuleiro")
 	break;
-}
-if((linhaOponente === linhaAtualRainha) && (colunaOponente === attackBemSucedido)){
+	} else if((linhaOponente === linhaAtualRainha) && (colunaOponente === attackBemSucedido)){
 	attackBemSucedido = true;
-
+	}
 }
-console.log("Ataque bem sucedido?" , attackBemSucedido)
+console.log("Ataque bem sucedido?" , attackBemSucedido);
