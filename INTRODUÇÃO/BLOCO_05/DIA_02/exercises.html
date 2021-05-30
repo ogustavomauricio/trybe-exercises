@@ -60,15 +60,14 @@
 
       let textH1 = document.createElement('h1');
       textH1.innerHTML = "Exercício 5.2 - JavaScript DOM";
-      textH1.classList.add('title');
       document.body.appendChild(textH1);
 
       let divMain = document.createElement('div');
-      divMain.classList.add('main-content');
+      divMain.className = 'main-content';
       document.body.appendChild(divMain);
 
       let divCenter = document;createElement('div');
-      divCenter.classList.add('center-content');
+      divCenter.className ='center-content';
       document.divMain.appendChild(divCenter);
 
       let tagP = document.createElement('p');
@@ -76,15 +75,16 @@
       document.divCenter.appendChild(tagP);
 
       let divLeft = document.createElement('div');
-      divLeft.classList.add('left-content');
-      document.body.divMain.appendChild(divLeft);
+      divLeft.className ='left-content';
+      document.divMain.appendChild(divLeft);
+      
 
       let divRigth = document.createElement('div');
-      divRigth.classList.add('right-content');
+      divRigth.className ='right-content';
       document.divMain.appendChild(divRigth);
 
       let img = document.createElement('img');
-      img.classList.add('small-image')
+      img.className = 'small-image'
       img.src = "https://picsum.photos/200";
       document.divLeft.appendChild(img);
 
@@ -102,11 +102,10 @@
       for( let index =1; index <= 3 ; index += 1){
         let tahH3 = document.createElement('h3');
         tagH3.innerHTML = "Tag" + index;
-        tagH3.classList.add('description')
         document.divMain.appendChild(tagH3);
       }
 
-      // 1 - Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body
+// 1 - Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body
       // 2 - Adicione a tag div com a classe main-content como filho da tag body ;
       // 3 - Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
       // 4 - Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
@@ -116,9 +115,37 @@
       // 8 -Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
       // 9 - Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
 
+
+      // PARTE 2
+
+      let title = document.getElementsByTagName('h1');
+      title.className = 'title';
+
+      let desc = document.getElementsByTagName('h3');
+
+      for( let index = 1; index <= 3 ;index += 1){
+        desc[index].className = 'description';
+      }
+
+      let remLeft = document.getElementsByClassName('left-content')[0];
+      remLeft.removeChild(divLeft);
+
+       let centerDivRight = document.getElementsByClassName('right-content');
+      centerDivRight.style.marginRight = 'auto'
+      
+       let paiCor = document.getElementsByTagName('center-content');
+       paiCor.style.backgroundColor = 'green';
+
+      elementUl.lastChild.remove(Dez);
+      elementUl.lastChild.remove(Nove);
+
       //    PARTE 2
       // 1 - Adicione a classe title na tag h1 criada;
       // 2 - Adicione a classe description nas 3 tags h3 criadas;
+      // 3 - Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+      // 4 - Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div ;
+      // 5 - Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+      // 6 -Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
 
     </script>
 
