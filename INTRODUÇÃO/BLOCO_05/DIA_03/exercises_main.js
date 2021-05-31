@@ -5,6 +5,38 @@ const input = document.getElementById('input');
 const myWebpage = document.getElementById('mySpotrybefy');
 
 
+function addTech(event){
+  if(event.target.getAttribute('class') == undefined) {
+      event.target.setAttribute('class',"tech");
+      console.log(event.target)
+ }
+   else if (event.target.className == "tech")  {
+  
+  event.target.removeAttribute('class');
+  
+}
+ 
+}  
+divUm.addEventListener('mouseover',addTech)
+
+divDois.addEventListener('mouseover',addTech)
+
+divTres.addEventListener('mouseover',addTech)
+
+
+function addText(event){
+ let element = document.querySelector('.tech')
+  element.innerHTML = input.value;
+
+}
+  
+input.addEventListener('keyup',addText)
+
+function linkExternal(event){
+location.href = "https://www.google.com";
+}
+
+myWebpage.addEventListener('dblclick', linkExternal)
 
 /*
  Copie esse arquivo e edite apenas ele;
@@ -25,8 +57,7 @@ Segue abaixo um exemplo do uso de event.target:
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
   event.target.innerText = 'Opção reiniciada';
-  // O event possui várias propriedades, porém a mais usada é o event.target,
-  // que retorna o objeto que disparou o evento.
+  // O event possui várias propriedades, porém a mais usada é o event.target,   // que retorna o objeto que disparou o evento.
 }
 
 divUm.addEventListener('dblclick', resetText);
