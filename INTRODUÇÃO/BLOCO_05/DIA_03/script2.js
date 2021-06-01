@@ -8,7 +8,7 @@ function createDaysOfTheWeek() {
       dayListItem.innerHTML = days;
   
       weekDaysList.appendChild(dayListItem);
-      console.log(weekDaysList)
+      // console.log(weekDaysList)
     };
   };
   
@@ -27,18 +27,18 @@ function createDaysOfTheWeek() {
         let listaDias = document.createElement('li');
         listaDias.innerHTML = dias;
 
-        listaDias.className = "days";
+        listaDias.className = "day";
 
         divDaysList.appendChild(listaDias);
 
-        console.log(listaDias);
+        // console.log(listaDias);
         
         if((dias === 24) ||(dias === 31)|| (dias === 25) ) {
-            listaDias.classList = " days, holiday";
+            listaDias.classList = " day, holiday";
         }
 
         if((dias === 4) || (dias === 11) || (dias === 18)){
-           listaDias.classList = "days, friday ";
+           listaDias.classList = "day, friday ";
        } else if (dias === 25){
           listaDias.classList.add ("friday")
         }
@@ -91,22 +91,26 @@ function createDaysOfTheWeek() {
      let friday = document.getElementsByClassName('friday');
      for(let index = 0; index < friday.length; index +=1){
       if(friday[index].style.backgroundColor === "white"){
-        friday[index].style.backgroundColor === 'rgb(238,238,238)';
+        friday[index].style.backgroundColor = 'rgb(238,238,238)';
       } else {
         friday[index].style.backgroundColor = 'white';
       }
      }  
    });
 
+// Exercício 6:
+function zoom(event){ 
+  event.target.style.fontSize = "30px" 
+  console.log(event.target) ;
+  
+  }
 
-  //  const btnHoliday = document.getElementById('btn-holiday');
-  //   btnHoliday.addEventListener('click', function() {
-  //     const holidays = document.querySelectorAll('.holiday');
-  //     for (let index = 0; index < holidays.length; index += 1) {
-  //       if (holidays[index].style.backgroundColor === 'white') {
-  //         holidays[index].style.backgroundColor = 'rgb(238,238,238)';
-  //       } else {
-  //         holidays[index].style.backgroundColor = 'white';
-  //       }
-  //     }
-  //   });
+  function zoomOut(event){ 
+    event.target.style.fontSize = "20px"  
+    
+    }
+
+  document.querySelector('#days').addEventListener('mouseover',zoom)
+  document.querySelector('#days').addEventListener('mouseout',zoomOut)
+
+//Exercício 7:
