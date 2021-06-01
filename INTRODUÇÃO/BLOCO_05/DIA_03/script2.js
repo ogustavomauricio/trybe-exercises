@@ -51,7 +51,7 @@ function createDaysOfTheWeek() {
     botao.innerHTML = "Feriados";  
 
     divBotao.appendChild(botao);
-    console.log(botao)
+ 
 
  
     const btnHoliday = document.getElementById('btn-holiday');
@@ -65,5 +65,48 @@ function createDaysOfTheWeek() {
         }
       }
     });
-    
+
+    // Exercício 04
+
+    // Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
+    // Adicione a este botão o ID "btn-friday" .
+    // Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .  
    
+   let botaoSexta = document.createElement('button');
+   botaoSexta.innerHTML = "Sexta-feira";
+   botaoSexta.id = 'btn-friday';
+   divBotao.appendChild(botaoSexta);
+  
+
+
+    //   Exercício 5:
+
+    // Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
+    // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
+    
+    
+    
+   let btnSexta = document.getElementById('btn-friday')
+   btnSexta.addEventListener('click', function(){
+     let friday = document.getElementsByClassName('friday');
+     for(let index = 0; index < friday.length; index +=1){
+      if(friday[index].style.backgroundColor === "white"){
+        friday[index].style.backgroundColor === 'rgb(238,238,238)';
+      } else {
+        friday[index].style.backgroundColor = 'white';
+      }
+     }  
+   });
+
+
+  //  const btnHoliday = document.getElementById('btn-holiday');
+  //   btnHoliday.addEventListener('click', function() {
+  //     const holidays = document.querySelectorAll('.holiday');
+  //     for (let index = 0; index < holidays.length; index += 1) {
+  //       if (holidays[index].style.backgroundColor === 'white') {
+  //         holidays[index].style.backgroundColor = 'rgb(238,238,238)';
+  //       } else {
+  //         holidays[index].style.backgroundColor = 'white';
+  //       }
+  //     }
+  //   });
