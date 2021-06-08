@@ -3,32 +3,57 @@
   padding: 0;
 }
 
+html{
+  height: 100%;
+  background-color: #F2A97E;
+  /* background-repeat: no-repeat;
+  font-family: sans-serif;
+  /* color: #0f222d; */
+  /* background-size: auto;*/ 
+} 
+
 #conteiner {
   text-align: center;
+  
 }
 
 .botoes {
   display: inline-block;
+  height: 50px;
   margin-left: 30px;
+
+}
+
+h1{
+  color: #0476D9;
+}
+
+#funcionamento{
+  color: #0476D9;
 }
 
 ol {
-  width: 500px;
-  border: 1px solid black;
-  height: 300px;
+  width: 500px; 
+  min-height: 300px; 
+ 
+  
 }
 
 #selected {
-  background-color: gray;
+  background-color: #0487D9;
 }
 
 #unselected {
-  background-color: white;
+ background-color: #F2B705;;
 }
 
 li {
-  border: 1px solid;
+  border-bottom: 1px solid #0487D9;
   list-style-type: none;
+  color: white;
+  padding: 5px;
+  background-color: #F2B705;
+  
 }
 
 .completed {
@@ -37,5 +62,67 @@ li {
 
 #lista-tarefas {
   margin: auto;
+}
 
+#texto-tarefa{
+  text-align: center;
+  padding: 7px;
+  width: 250px;
+  margin: 30px;
+}
+
+#criar-tarefa {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #05AFF2;
+  color: white;  
+  border:none
+}
+
+#apaga-tudo{
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #05AFF2;
+  color: white;  
+  border:none
+}
+
+#remover-finalizados{
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #05AFF2;
+  color: white;  
+  border:none
+}
+
+#salvar-tarefas{
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #05AFF2;
+  color: white; 
+  border:none 
+}
+
+#mover-cima{
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #05AFF2;
+  color: white;  
+  border:none
+}
+
+#mover-baixo{
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #05AFF2;
+  color: white;  
+  border:none
+}
+
+#remover-selecionado{
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #05AFF2;
+  color:white;  
+  border:none
 }
