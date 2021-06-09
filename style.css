@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-html{
+html {
   height: 100%;
   background-color: #020126;
   /* background-repeat: no-repeat;
@@ -13,43 +13,44 @@ html{
 } 
 
 #conteiner {
-  text-align: center;
-  
-}
-
-.so-botoes{
-  width:600px;
-  height: 20px;
-  /* background-color:#020659 ; */
-  background-color:#ffffff ;
-  padding: 20px;
-  margin: 100px auto;
+  max-width: 700px;
+  height: 500px;
+  margin: auto;
  }
 
+.so-botoes {
+  max-width: 700px;
+  position: relative; 
+  left:50px;
+  bottom: 120px;
+  padding: 10px; 
+  margin-top: 150px;
+ }
 
 .botoes {
   display: inline-block;
-  margin-bottom: 100px;
-   
+  margin-right: 10px;
 }
 
-
-
-h1{
+h1 {
   color: #F2CB05;
-  margin: 10px;
+  margin-left:200px;
+  margin-top: 30px;
 }
 
 #funcionamento{
   color: #F2CB05;
-  margin-bottom: 10px;
+  margin-left: 160px;
+  margin-bottom: 20px;
 }
 
-ol {
-position: absolute;
-width: 500px; 
-min-height: 300px; 
-margin-top: 10px;
+ol {  
+position: relative;
+left: 10px;
+width: 500px;
+bottom: 265px;
+min-height: 100px;
+
 }
 
 #selected {
@@ -60,16 +61,15 @@ margin-top: 10px;
  background-color: white;
 }
 
-li {
-  position: relative;
-  left: 375px;
-  bottom: 270px;
+#add {
+  text-align: center;
+}
+
+li { 
   border-bottom: 1px solid #F2CB05;
   list-style-type: none;
   color: #0D0D0D;
-  padding: 5px;
-
- 
+  padding: 5px;   
 }
 
 .completed {
@@ -80,7 +80,7 @@ li {
   margin: auto;
 }
 
-#texto-tarefa{
+#texto-tarefa {
   text-align: center;
   padding: 7px;
   width: 250px;
@@ -95,13 +95,12 @@ li {
   border:none;
 }
 
-#apaga-tudo{
+#apaga-tudo {
   padding: 8px;
   border-radius: 8px;
   background-color: #D98E04;
   color: white;  
-  border:none;
-  
+  border:none;  
 }
 
 #remover-finalizados{
@@ -112,7 +111,7 @@ li {
   border:none;
 }
 
-#salvar-tarefas{
+#salvar-tarefas {
   padding: 8px;
   border-radius: 8px;
   background-color: #D98E04;
@@ -120,18 +119,18 @@ li {
   border:none ;
 }
 
-#mover-cima{
-  width: 30px;
-  margin-bottom: 10px;
+#mover-cima {
+  width: 25px;
+  margin-bottom: 5px;
  
 }
 
-#mover-baixo{
-  width: 30px;
+#mover-baixo {
+  width: 25px;
   -webkit-transform: rotate(180deg);
 }
 
-#remover-selecionado{
+#remover-selecionado {
   padding: 8px;
   border-radius: 8px;
   background-color: #D98E04;
@@ -139,8 +138,8 @@ li {
   border:none;
 }
 
-.mover{
+.mover {
   position: relative;
-  left:280px;
-  bottom: 200px;
+  left: 630px;
+  bottom: 70px;
 }
