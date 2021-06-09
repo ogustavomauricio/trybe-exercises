@@ -5,7 +5,7 @@
 
 html{
   height: 100%;
-  background-color: #F2A97E;
+  background-color: #020126;
   /* background-repeat: no-repeat;
   font-family: sans-serif;
   /* color: #0f222d; */
@@ -17,26 +17,39 @@ html{
   
 }
 
+.so-botoes{
+  width:600px;
+  height: 20px;
+  /* background-color:#020659 ; */
+  background-color:#ffffff ;
+  padding: 20px;
+  margin: 100px auto;
+ }
+
+
 .botoes {
   display: inline-block;
-  height: 50px;
-  margin-left: 30px;
-
+  margin-bottom: 100px;
+   
 }
 
+
+
 h1{
-  color: #0476D9;
+  color: #F2CB05;
+  margin: 10px;
 }
 
 #funcionamento{
-  color: #0476D9;
+  color: #F2CB05;
+  margin-bottom: 10px;
 }
 
 ol {
-  width: 500px; 
-  min-height: 300px; 
- 
-  
+position: absolute;
+width: 500px; 
+min-height: 300px; 
+margin-top: 10px;
 }
 
 #selected {
@@ -44,16 +57,19 @@ ol {
 }
 
 #unselected {
- background-color: #F2B705;;
+ background-color: white;
 }
 
 li {
-  border-bottom: 1px solid #0487D9;
+  position: relative;
+  left: 375px;
+  bottom: 270px;
+  border-bottom: 1px solid #F2CB05;
   list-style-type: none;
-  color: white;
+  color: #0D0D0D;
   padding: 5px;
-  background-color: #F2B705;
-  
+
+ 
 }
 
 .completed {
@@ -68,61 +84,63 @@ li {
   text-align: center;
   padding: 7px;
   width: 250px;
-  margin: 30px;
+  margin-left: 30px;
 }
 
 #criar-tarefa {
   padding: 8px;
   border-radius: 8px;
-  background-color: #05AFF2;
-  color: white;  
-  border:none
+  background-color: #F2CB05;
+  color: #0D0D0D;  
+  border:none;
 }
 
 #apaga-tudo{
   padding: 8px;
   border-radius: 8px;
-  background-color: #05AFF2;
+  background-color: #D98E04;
   color: white;  
-  border:none
+  border:none;
+  
 }
 
 #remover-finalizados{
   padding: 8px;
   border-radius: 8px;
-  background-color: #05AFF2;
+  background-color: #D98E04;
   color: white;  
-  border:none
+  border:none;
 }
 
 #salvar-tarefas{
   padding: 8px;
   border-radius: 8px;
-  background-color: #05AFF2;
+  background-color: #D98E04;
   color: white; 
-  border:none 
+  border:none ;
 }
 
 #mover-cima{
-  padding: 8px;
-  border-radius: 8px;
-  background-color: #05AFF2;
-  color: white;  
-  border:none
+  width: 30px;
+  margin-bottom: 10px;
+ 
 }
 
 #mover-baixo{
-  padding: 8px;
-  border-radius: 8px;
-  background-color: #05AFF2;
-  color: white;  
-  border:none
+  width: 30px;
+  -webkit-transform: rotate(180deg);
 }
 
 #remover-selecionado{
   padding: 8px;
   border-radius: 8px;
-  background-color: #05AFF2;
+  background-color: #D98E04;
   color:white;  
-  border:none
+  border:none;
+}
+
+.mover{
+  position: relative;
+  left:280px;
+  bottom: 200px;
 }
