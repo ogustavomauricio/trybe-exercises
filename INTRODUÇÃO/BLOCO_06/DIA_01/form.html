@@ -1,81 +1,93 @@
-<!--index.html-->
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario-curriculo</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <title>Cadastro de Currículo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header class="form-header">
-    <h1>Formulário para cadastro de currículo</h1>
-    <p>Preencha os campos abaixo.</p>
+  <header class= "title">
+    <h1 >Formulário de Currículo</h1>
+    <p><em>Cadastre-se para fazer parte da Nossa Equipe</em></p>
   </header>
-  <main>
-    <form id="cv-form">
-      <div class="form-row">
+  <div class="conteiner">
+    <form>
+      <div>
         <fieldset>
-          <div class="line-content">
-            <label for="name">Nome: </label>
-            <input type="text" name="name" id="name" maxlength="40" required>
+          <div class="content">
+            <label for="name">Digite seu Nome: </label>
+            <input type="text" name="name" id="name" maxlength="40" required placeholder="Digite seu Nome">
           </div>
-          <div class="line-content">
-            <label for="email">Endereço de e-mail: </label>
-            <input class="email-input" type="email" name="email" id="email" maxlength="50" required>
+
+          <div class="content">
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" maxlength="50" required>
           </div>
-          <div class="line-content">
-            <label for="cpf-number">CPF: </label>
-            <input type="text" name="cpf" id="cpf-number" maxlength="11" required>
+
+          <div class="content">
+            <label for="cpf">CPF: </label>
+            <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" maxlength="11" required>
           </div>
-          <div class="line-content">
-            <label for="address">Endereço: </label>
-            <input type="text" name="address" id="address" maxlength="200" required>
+
+          <div class="content">
+            <label for="end">Endereço: </label>
+            <input type="text" name="end" id="end" maxlength="200" required>
           </div>
-          <div class="line-content">
-            <label for="city">Cidade: </label>
-            <input type="text" name="city" id="city" maxlength="200" required>
+         
+          <div class="content">
+            <label for="city"> Cidade: </label>
+            <input type="text" name="city" id="city" maxlength="28" required>
           </div>
-          <div class="line-content">
-            <label for="state">Estado: </label>
-            <select name="state" id="state"  required>
-              <option disabled selected value>Selecione seu estado</option>
+
+          <div class="content">
+            <label for="estado">Estado: </label>
+            <select name="estado" id="estado">
+              <option value="" disabled selected>Informe seu Estado</option>
             </select>
           </div>
-          <div class="line-content">
-            <label for="houseType">Tipo de imóvel: </label>
-            <input type="radio" name="houseType" id="house" value="house" required> <span>Casa</span>
-            <input type="radio" name="houseType" id="apartment" value="apartment" required>
-            <span>Apartamento</span>
-          </div>
+
+          <div class="content">
+            <label for="casa">Casa:</label>
+            <input type="radio" name="buttonRadio" required id="casa">
+
+            <label for="ap">Apartamento:</label>
+            <input type="radio" name="buttonRadio" required id="ap">
+          </div>         
         </fieldset>
+
         <fieldset>
-          <div class="line-content">
-            <label for="resume">Resumo do currículo: </label>
-            <textarea id="resume" name="resume" maxlength="1000" cols="100" rows="20" required></textarea>
+          <div class="content"> 
+            <label for="resumo"></label>
+            <textarea id="resumo" maxlength="1000" required cols="60" rows="15" placeholder="Resumo de Currículo" ></textarea>
           </div>
-          <div class="line-content">
-            <label for="role">Cargo: </label>
-            <input type="text" name="role" id="role" maxlength="40" required>
+
+          <div class="content">
+            <label for="cargo">Cargo:</label>
+            <input type="text" name="cargo" id="cargo" required maxlength="40">
           </div>
-          <div class="line-content">
-            <label for="roleDescription">Descrição do cargo: </label>
-            <input type="text" id="roleDescription" name="roleDescription" required>
+
+          <div class="content">
+            <label for="cargoDescription">Descreva seu Cargo:</label>
+            <input type="text" name="cargoDescription" id="cargoDescription" required maxlength="500">
           </div>
-          <div class="line-content">
-            <label for="startDate">Data de início: </label>
-            <input type="text" class="input-data" name="startDate" value="" required>
+
+          <div class="content">
+            <label for="startDate">Data de Início :</label>
+            <input type="text" name="startDate" id="startDate" required >
           </div>
+
+          <button id="send">Enviar</button>
+          <button>Limpar</button>      
         </fieldset>
-        <button class="submit-button" type="submit">Enviar</button>
-        <button class="clear-button" type="button">Limpar</button>
+
+        <div>
+
+        </div>
       </div>
     </form>
-  </main>
-  <section class="form-data"></section>
+  </div>
   <script src="script.js"></script>
 </body>
-
 </html>
