@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Currículo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class= "title">
+    <h1 >Formulário de Currículo</h1>
+    <p><em>Cadastre-se para fazer parte da Nossa Equipe</em></p>
+  </header>
+  <div class="conteiner">
+    <form>
+      <div>
+        <fieldset>
+          <div class="content">
+            <label for="name">Digite seu Nome: </label>
+            <input type="text" name="name" id="name" maxlength="40" required placeholder="Digite seu Nome">
+          </div>
+
+          <div class="content">
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" maxlength="50" required>
+          </div>
+
+          <div class="content">
+            <label for="cpf">CPF: </label>
+            <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" maxlength="11" required>
+          </div>
+
+          <div class="content">
+            <label for="end">Endereço: </label>
+            <input type="text" name="end" id="end" maxlength="200" required>
+          </div>
+         
+          <div class="content">
+            <label for="city"> Cidade: </label>
+            <input type="text" name="city" id="city" maxlength="28" required>
+          </div>
+
+          <div class="content">
+            <label for="estado">Estado: </label>
+            <select name="estado" id="estado">
+              <option value="" disabled selected>Informe seu Estado</option>
+            </select>
+          </div>
+
+          <div class="content">
+            <label for="casa">Casa:</label>
+            <input type="radio" name="buttonRadio" required id="casa">
+
+            <label for="ap">Apartamento:</label>
+            <input type="radio" name="buttonRadio" required id="ap">
+          </div>         
+        </fieldset>
+
+        <fieldset>
+          <div class="content"> 
+            <label for="resumo"></label>
+            <textarea id="resumo" maxlength="1000" required cols="60" rows="15" placeholder="Resumo de Currículo" ></textarea>
+          </div>
+
+          <div class="content">
+            <label for="cargo">Cargo:</label>
+            <input type="text" name="cargo" id="cargo" required maxlength="40">
+          </div>
+
+          <div class="content">
+            <label for="cargoDescription">Descreva seu Cargo:</label>
+            <input type="text" name="cargoDescription" id="cargoDescription" required maxlength="500">
+          </div>
+
+          <div class="content">
+            <label for="startDate">Data de Início :</label>
+            <input type="text" name="startDate" id="startDate" required >
+          </div>
+
+          <button class="send">Enviar</button>
+          <button class = "clear">Limpar</button>      
+        </fieldset>
+
+        <div>
+
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
