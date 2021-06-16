@@ -2,26 +2,31 @@ body {
 font-size: 20px ;
 color:bisque;
 }
+
 h1 {
 font-size: 2em;
 color:rgb(64, 230, 43);
 text-align: center;
 }
+
 h2 {
 font-size:  1.5em;
 color:rgb(64, 230, 43);
 text-align: center;
 }
+
 .conteiner-paragrafo {
     width: 80%;
     margin: auto;
 }
+
 img {
     max-width: 100%;
 }
 
 figure {
-    margin: auto;
+    /* display: flex; */
+    /* margin: auto; */
 }
 
 @media screen and (min-width: 1000px) {
@@ -31,5 +36,19 @@ figure {
 .img-conteiner{ 
     display: flex;
     flex-wrap: wrap;  
+    justify-content: center;
   }
+}
+
+@media screen and (max-width:1000px) {
+ body {
+     background-color: rgb(84, 80, 143);
+ }    
+ figure {
+     
+     display:flex ;
+     flex-direction: column;
+     justify-content: center;
+ }
+
 }
