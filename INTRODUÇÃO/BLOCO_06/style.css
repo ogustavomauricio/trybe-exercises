@@ -1,0 +1,170 @@
+
+body {
+  align-items: center;
+  color: #525252;
+  display: flex;
+  flex-flow: column wrap;
+  font-family: Raleway, sans-serif;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+}
+
+h1 {
+  font-family: Cinzel, serif;
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 25px;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+p.trick {
+  color: white;
+  font-size: 14px;
+}
+
+p strong {
+  font-weight: 700;
+}
+
+.card p:nth-last-child(1) {
+  align-self: flex-end;
+  font-size: 14px;
+}
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.card {
+  border-radius: 5px;
+  color: white;
+  display: none;
+  flex-flow: row wrap;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  width: 200px;
+}
+
+.card:nth-of-type(1) {
+  background-color: #0fa36b;
+}
+
+.card:nth-of-type(2) {
+  background-color: #0255c2;
+}
+
+.card:nth-of-type(3) {
+  background-color: #41197f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu';
+}
+
+body {
+  background-color: rgb(247, 247, 247);
+}
+
+.header-container {
+  background-color: #5C687C;
+  display: flex;
+ 
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  width:268px;
+}
+
+.menu-container {
+  display: flex;
+  width: 500px;
+  flex-grow: 1;
+  order:1;
+  align-self: center;
+}
+
+.menu-container ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+}
+
+.menu-container li {
+  color: white;
+  font-weight: 500;
+  font-size: 1.3rem;
+  list-style: none;
+  margin-right: 10px;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  flex-grow: 10;
+
+}
+
+.movie-container h2 {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  }
+
+.card-container div {
+  align-items: center;
+  background-color: #5C687C;
+  border: black solid 1px;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  margin: 10px;
+  width: 16%;
+  flex-grow: 1;
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 350px;
+  align-self: center;
+  flex-grow: 1;
+}
+
+.aside-container h3, h4 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.aside-container p {
+  margin: 10px 0;
+  text-align: justify;
+}
+
