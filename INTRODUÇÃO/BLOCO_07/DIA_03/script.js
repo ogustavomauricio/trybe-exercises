@@ -235,23 +235,71 @@
 
 // Use a variável parameter como parâmetro da função abaixo, escreva testes para verificar se a mesma está retornando como se vê na variável result e, caso não esteja, altere o código para que ele passe nos testes.
 
-const assert = require('assert');
+// const assert = require('assert');
 
-const greetPeople = (people) => {
-    let greeting = 'Hello ';
+// const greetPeople = (people) => {
+//     let greeting = 'Hello ';
    
   
-    for (const person in people) {
-     const result = (`${greeting} ${people[person]}`)
+//     for (const person in people) {
+//      const result = (`${greeting} ${people[person]}`)
        
-    }
-    // console.log(result)
-    return result;
+//     }
+//     // console.log(result)
+//     return result;
 
+//   };
+  
+//   const parameter = ['Irina', 'Ashleigh', 'Elsa'];
+//   const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
+//   const output = greetPeople(parameter);
+
+//   assert.strictEqual(output,result);
+
+// =======================================================================================
+// Use a variável parameter como parâmetro da função abaixo, escreva testes para verificar se a mesma está retornando como se vê na variável result e, caso não esteja, altere o código para que ele passe nos testes.
+// const assert = require('assert');
+
+// const removeVowels = (word) => {
+//     const characters = word.split('');
+//     const results = [];
+//     let counter = 0;
+
+//     for (let index = 0; index < characters.length; index += 1) {
+//       if (
+//         characters[index] === 'a' ||
+//         characters[index] === 'o' ||
+//         characters[index] === 'i' ||
+//         characters[index] === 'e' ||
+//         characters[index] === 'u'
+//       ) {
+//         counter += 1;
+//         results.push(counter);
+        
+//       } else {
+//         results.push(characters[index]);
+//       }
+//     }
+//    return results.join(''); 
+//   };
+  
+  
+//   const parameter = 'Dayane';
+//   const result = 'D1y2n3';
+//   const output = removeVowels(parameter);
+
+//   assert.strictEqual(output,result);
+
+//======================================================================================
+const greaterThanTen = (array) => {
+    let results = 0;
+    for (let index = 0; index < array.length; index += 1) {
+      if (array[index] > 10) {
+        results += array[index];
+      }
+    }
+    return results;
   };
   
-  const parameter = ['Irina', 'Ashleigh', 'Elsa'];
-  const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
-  const output = greetPeople(parameter);
-
-  assert.strictEqual(output,result);
+  const parameter = [4, 10, 32, 9, 21];
+  const result = [32, 21];
