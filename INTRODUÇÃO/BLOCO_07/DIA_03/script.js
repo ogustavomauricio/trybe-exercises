@@ -235,104 +235,14 @@
 
 // Use a variável parameter como parâmetro da função abaixo, escreva testes para verificar se a mesma está retornando como se vê na variável result e, caso não esteja, altere o código para que ele passe nos testes.
 
-// const assert = require('assert');
-
-// const greetPeople = (people) => {
-//     let greeting = 'Hello ';
-   
+const greetPeople = (people) => {
+    let greeting = 'Hello ';
   
-//     for (const person in people) {
-//      const result = (`${greeting} ${people[person]}`)
-       
-//     }
-//     // console.log(result)
-//     return result;
-
-//   };
-  
-//   const parameter = ['Irina', 'Ashleigh', 'Elsa'];
-//   const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
-//   const output = greetPeople(parameter);
-
-//   assert.strictEqual(output,result);
-
-// =======================================================================================
-// Use a variável parameter como parâmetro da função abaixo, escreva testes para verificar se a mesma está retornando como se vê na variável result e, caso não esteja, altere o código para que ele passe nos testes.
-// const assert = require('assert');
-
-// const removeVowels = (word) => {
-//     const characters = word.split('');
-//     const results = [];
-//     let counter = 0;
-
-//     for (let index = 0; index < characters.length; index += 1) {
-//       if (
-//         characters[index] === 'a' ||
-//         characters[index] === 'o' ||
-//         characters[index] === 'i' ||
-//         characters[index] === 'e' ||
-//         characters[index] === 'u'
-//       ) {
-//         counter += 1;
-//         results.push(counter);
-        
-//       } else {
-//         results.push(characters[index]);
-//       }
-//     }
-//    return results.join(''); 
-//   };
-  
-  
-//   const parameter = 'Dayane';
-//   const result = 'D1y2n3';
-//   const output = removeVowels(parameter);
-
-//   assert.strictEqual(output,result);
-
-//======================================================================================
-
-// Use a variável parameter como parâmetro da função abaixo, escreva testes para verificar se a mesma está retornando como se vê na variável result e, caso não esteja, altere o código para que ele passe nos testes.
-
-// const assert = require('assert');
-
-// const greaterThanTen = (array) => {
-//     const results = [];
-//     for (let index = 0; index < array.length; index += 1) {
-//       if (array[index] > 10) {
-//          results.push(array[index]);
-//       }
-      
-//     }
-//     return results;
-//   };
-  
-//   const parameter = [4, 10, 32, 9, 21];
-//   const result = [32, 21];
-//   const output = greaterThanTen(parameter);
-
-//   assert.deepStrictEqual(output,result);
-
-// =======================================================================================
-
-//Use a variável parameter como parâmetro da função abaixo, escreva testes para verificar se a mesma está retornando como se vê na variável result e, caso não esteja, altere o código para que ele passe nos testes.
-
-const assert = require('assert')
-
-function secondThirdSmallest(array) {
-  let results = [];
-  for (let index = 0; index < array.length; index += 1){
-    if (array[index] === 5 || array[index] === 6){
-      results.push(array[index]);
+    for (const person in people) {
+      greeting += people[person];
     }
-  }
-     return results;
+    return greeting;
   };
   
- 
-
-const parameter = [4, 10, 32, 9, 21, 90, 5, 11, 8, 6];
-const result = [5, 6];
-const output = secondThirdSmallest(parameter);
-
-assert.deepStrictEqual(output,result)
+  const parameter = ['Irina', 'Ashleigh', 'Elsa'];
+  const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
