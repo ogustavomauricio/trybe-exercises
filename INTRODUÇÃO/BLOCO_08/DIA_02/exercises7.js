@@ -61,30 +61,20 @@ const books = [
     },
     releaseYear: 1928,
   },
-  
 ];
 
-
-
 // Adicione o código do exercício aqui:
+// 7 - Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
 
-// Encontre o primeiro livro cujo nome possui 26 caracteres.
+const expectedResult = false;
 
-const expectedResult = {
-    author: {
-      birthYear: 1948,
-      name: 'George R. R. Martin',
-    },
-    genre: 'Fantasia',
-    id: 1,
-    name: 'As Crônicas de Gelo e Fogo',
-    releaseYear: 1991,
-  };
+function authorUnique() {
+  // escreva seu código aqui  
+    return books.every((book) =>
+      !books.some((bookSome) =>
+        (bookSome.author.birthYear === book.author.birthYear)
+        && (bookSome.author.name !== book.author.name)));
   
-  function getNamedBook() {
-    // escreva seu código aqui
-   return books.find((book) => book.name.length === 26)
-      
-  }
-  
-  assert.deepStrictEqual(getNamedBook(), expectedResult);
+}
+
+assert.strictEqual(authorUnique(), expectedResult);

@@ -61,30 +61,17 @@ const books = [
     },
     releaseYear: 1928,
   },
-  
 ];
-
-
 
 // Adicione o código do exercício aqui:
 
-// Encontre o primeiro livro cujo nome possui 26 caracteres.
+// Faça uma função que retorne true , se algum livro foi lançado na década de 80, e false , caso contrário.
 
-const expectedResult = {
-    author: {
-      birthYear: 1948,
-      name: 'George R. R. Martin',
-    },
-    genre: 'Fantasia',
-    id: 1,
-    name: 'As Crônicas de Gelo e Fogo',
-    releaseYear: 1991,
-  };
-  
-  function getNamedBook() {
-    // escreva seu código aqui
-   return books.find((book) => book.name.length === 26)
-      
-  }
-  
-  assert.deepStrictEqual(getNamedBook(), expectedResult);
+const expectedResult = true;
+
+function someBookWasReleaseOnThe80s() {
+  // escreva seu código aqui
+  return books.some((lanc) => lanc.releaseYear >= 1980 || lanc.releaseYear <= 1989)
+}
+
+assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);
