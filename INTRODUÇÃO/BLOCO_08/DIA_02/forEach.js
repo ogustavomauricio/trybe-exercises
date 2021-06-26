@@ -31,9 +31,31 @@ const passengers = [
     { name: "Natan", birthYear: 2001 },
     { name: "Ana", birthYear: 1995 }
   ]
+// passengers.forEach((passenger) =>{
+//     passenger.age = 2021 - passenger.birthYear
+// });
 
-passengers.forEach((passenger) =>{
-    passenger.age = 2021 - passenger.birthYear
-});
+// console.log(passengers)
 
-console.log(passengers)
+
+// imprimir esse array de objetos usando o FOR TRADICIONAL
+
+// for (let index = 0; index < passengers.length; index += 1){
+//   console.log(passengers[index]);
+// }
+
+//IMPRIMINDO ESSE ARRAY DE OBJETOS USANDO O FOREACH
+
+// passengers.forEach((passager) => {
+//   console.log("Gustavo");
+// })
+
+
+// desafio do codewars resolvido com forEach
+// const notas = [1,2,3,4,5,];
+// let media = 0;
+// notas.forEach(nota => { 
+//   media += nota;
+//   return media
+// })
+// console.log(media /notas.length)
