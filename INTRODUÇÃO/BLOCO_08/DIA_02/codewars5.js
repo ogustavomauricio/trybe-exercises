@@ -19,6 +19,35 @@ var list1 = [
 // O valor da contagem deve ser um número válido.
 // A matriz de entrada sempre será válida e formatada como no exemplo acima.
 
-function countLanguages(list) {
-   
-  }
+// function countLanguages(list) {
+//    let counter = 0;
+//    let counter2 = 0;
+//    let counter3 = 0;
+
+//    for(let index = 0; index < list.length; index +=1) {
+//      if(list[index].language === 'C'){
+//        counter += 1;
+//      }
+//    }
+
+//    for(let index = 0; index < list.length; index +=1) {
+//     if(list[index].language === 'JavaScript'){
+//       counter2+= 1;
+//     }
+//   }
+
+//   for(let index = 0; index < list.length; index +=1) {
+//     if(list[index].language === 'Ruby'){
+//       counter3 += 1;
+//     }
+//   }
+//   return `C: ${counter}, JavaScript: ${counter2}, Ruby: ${counter3}`
+//   }
+// countLanguages(list1)
+//   console.log(countLanguages) 
+
+function countLanguages(list){
+  count= {};
+  list.forEach(element => count[element.language] = (count[element.language]|| 0) + 1);
+  return count
+}
