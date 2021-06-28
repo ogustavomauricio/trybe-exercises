@@ -79,3 +79,8 @@ function averageAge() {
 }
 
 assert.strictEqual(averageAge(), expectedResult);
+
+// Explicação da resolução: a média é feita atravez da soma dos elementos e a divisão da quantidade de elementos. 
+// No arrayLength foi atribuio o tamanho total do array.
+// na variável age atribui a função reduce que somava o valor atual ao resultado da subtração entre ano de lançamento e nascimento do author.
+// o returno da função averageAge é igual a soma dividido pelo tamanho do array.
