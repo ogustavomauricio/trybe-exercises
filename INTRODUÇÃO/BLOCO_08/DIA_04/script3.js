@@ -70,7 +70,11 @@ const books = [
 const expectedResult = 43;
 
 function averageAge() {
-   
+    const arrayLength = books.length;
+    const age = books.reduce((acc, currentValue) => (
+        acc + (currentValue.releaseYear - currentValue.author.birthYear)
+    ), 0);
+    return age / arrayLength;
   
 }
 
