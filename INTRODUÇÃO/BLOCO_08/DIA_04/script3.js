@@ -65,18 +65,13 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-// 2 - Crie uma string com os nomes de todas as pessoas autoras.
+// 3 -  Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
 
-const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
+const expectedResult = 43;
 
-function reduceNames() {
-  const nome = books.reduce((acc, currentValue, index, array) =>{
-    if (index === array.length -1)  return `${acc} ${currentValue.author.name}.`;
-    return `${acc} ${currentValue.author.name},`;   
-  },'')
-  return nome.trim();
+function averageAge() {
+   
+  
 }
 
-assert.strictEqual(reduceNames(), expectedResult);
-
-// Explicação do exercício: Eu precisei do if para verificar se o index era o último ponto final(.) Caso fose o return seria com o ponto. Se não o retorno seria com virgula(,). Era preciso criar essa constante pq seria ela o retorno da function reduce name. E as ('') aspas no final é para englobar os elementos como string. 
+assert.strictEqual(averageAge(), expectedResult);
