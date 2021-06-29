@@ -1,4 +1,4 @@
-const assert = require('assert');
+// const assert = require('assert');
 
 // const rectangleArea = (width, height) => width * height;
 
@@ -14,6 +14,9 @@ const assert = require('assert');
 const assert = require('assert');
 
 // escreva sum abaixo
+function sum(...args) {
+    return args.reduce((acc, current) => acc + current, 0);
+}
 
 assert.strictEqual(sum(), 0);
 assert.strictEqual(sum(1), 1);
