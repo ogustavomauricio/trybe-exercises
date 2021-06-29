@@ -140,28 +140,41 @@
 //7 - Escreva uma função shipLength que, dado um objeto representando um navio, retorna o comprimento dele, mostrando também a devida unidade de comprimento:
 // Dica: use object destructuring .
 
+// const assert = require('assert');
+
+// const ships = [
+//   {
+//     name: 'Titanic',
+//     length: 269.1,
+//     measurementUnit: 'meters',
+//   },
+//   {
+//     name: 'Queen Mary 2',
+//     length: 1132,
+//     measurementUnit: 'feet',
+//   },
+//   {
+//     name: 'Yamato',
+//     length: 256,
+//     measurementUnit: 'meters',
+//   },
+// ];
+
+// // escreva shipLength abaixo
+
+// assert.strictEqual(shipLength(ships[0]), 'Titanic is 269.1 meters long');
+// assert.strictEqual(shipLength(ships[1]), 'Queen Mary 2 is 1132 feet long');
+// assert.strictEqual(shipLength(ships[2]), 'Yamato is 256 meters long');
+
+//====================================================================================
+
+//8 - Escreva uma função greet que, dado o nome de uma pessoa, retorna uma mensagem de cumprimento:
+// Dica: use default params .
+
 const assert = require('assert');
 
-const ships = [
-  {
-    name: 'Titanic',
-    length: 269.1,
-    measurementUnit: 'meters',
-  },
-  {
-    name: 'Queen Mary 2',
-    length: 1132,
-    measurementUnit: 'feet',
-  },
-  {
-    name: 'Yamato',
-    length: 256,
-    measurementUnit: 'meters',
-  },
-];
+// escreva greet abaixo
 
-// escreva shipLength abaixo
-
-assert.strictEqual(shipLength(ships[0]), 'Titanic is 269.1 meters long');
-assert.strictEqual(shipLength(ships[1]), 'Queen Mary 2 is 1132 feet long');
-assert.strictEqual(shipLength(ships[2]), 'Yamato is 256 meters long');
+assert.strictEqual(greet('John'), 'Hi John');
+assert.strictEqual(greet('John', 'Good morning'), 'Good morning John');
+assert.strictEqual(greet('Isabela', 'Oi'), 'Oi Isabela');
