@@ -120,17 +120,48 @@
 //6 - Suponha que você esteja lidando com carros e, da forma como o problema lhe foi entregue, cada carro é modelado como um array. Porém, essa modelagem está baixo nível. Cria uma função toObject que, dada uma lista, retorna um objeto representando o carro:
 // Dica: use array destructuring e abbreviation object literal .
 
+// const assert = require('assert');
+
+// const palio = ['Palio', 'Fiat', 2019];
+// const shelbyCobra = ['Shelby Cobra', 'Ford', 1963];
+// const chiron = ['Chiron', 'Bugatti', 2016];
+
+// // escreva toObject abaixo
+
+// const toObject = ([name,brand,year]) => ({ name,brand,year });
+
+
+//  assert.deepStrictEqual(toObject(palio), { name: 'Palio', brand: 'Fiat', year: 2019 });
+// assert.deepStrictEqual(toObject(shelbyCobra), { name: 'Shelby Cobra', brand: 'Ford', year: 1963 });
+// assert.deepStrictEqual(toObject(chiron), { name: 'Chiron', brand: 'Bugatti', year: 2016 });
+
+//=====================================================================================
+
+//7 - Escreva uma função shipLength que, dado um objeto representando um navio, retorna o comprimento dele, mostrando também a devida unidade de comprimento:
+// Dica: use object destructuring .
+
 const assert = require('assert');
 
-const palio = ['Palio', 'Fiat', 2019];
-const shelbyCobra = ['Shelby Cobra', 'Ford', 1963];
-const chiron = ['Chiron', 'Bugatti', 2016];
+const ships = [
+  {
+    name: 'Titanic',
+    length: 269.1,
+    measurementUnit: 'meters',
+  },
+  {
+    name: 'Queen Mary 2',
+    length: 1132,
+    measurementUnit: 'feet',
+  },
+  {
+    name: 'Yamato',
+    length: 256,
+    measurementUnit: 'meters',
+  },
+];
 
-// escreva toObject abaixo
+// escreva shipLength abaixo
 
-const toObject = ([name,brand,year]) => ({ name,brand,year });
-
-
- assert.deepStrictEqual(toObject(palio), { name: 'Palio', brand: 'Fiat', year: 2019 });
-assert.deepStrictEqual(toObject(shelbyCobra), { name: 'Shelby Cobra', brand: 'Ford', year: 1963 });
-assert.deepStrictEqual(toObject(chiron), { name: 'Chiron', brand: 'Bugatti', year: 2016 });
+assert.strictEqual(shipLength(ships[0]), 'Titanic is 269.1 meters long');
+assert.strictEqual(shipLength(ships[1]), 'Queen Mary 2 is 1132 feet long');
+assert.strictEqual(shipLength(ships[2]), 'Yamato is 256 meters long');
