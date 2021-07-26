@@ -4,7 +4,9 @@ class Form extends Component {
     constructor() {
         super()
 
-        this.handleChange = this.handleChange.bind(this)
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.fileInput = React.createRef();
 
         this.state = { 
             nome: '',
@@ -21,6 +23,13 @@ class Form extends Component {
         const value = target.type === 'checkbox' ? target.checked : target.value;
       this.setState({
           [name]:value}) ;
+    }
+
+    handleSubmit (event) {
+        event.preventDefault();
+        alert(
+            `Selected File - ${this.fileInput.current.files[0].name}`
+        )
     }
     render() {
         return(
@@ -58,6 +67,11 @@ class Form extends Component {
                             <option value='barzinho'>Barzinho</option>
                             <option value='chuveiro'>Chuveiro</option>
                         </select>
+                    </label>
+
+                    <label>
+                        Mande seu vídeo Cantando:
+                        <input type="file" />
                     </label>
                 </form>
         </div>
