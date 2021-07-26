@@ -4,20 +4,23 @@ class Form extends Component {
     constructor() {
         super()
 
-        this.handleTextAreaChange = this.handleTextAreaChange.bind(this)
+        this.handleChange = this.handleChange.bind(this)
 
         this.state = { 
             nome: '',
             email: '',
             motivoParaCantar: '',
             idade: 0,
-            vaiComparecer: false,
+            voceJaCanta: false,
             ondeVocêCanta: ''
         }
     }
 
-    handleTextAreaChange(event) {   
-      this.setState({motivoParaCantar: event.target.value}) ;
+    handleChange({target}) {
+        const {name} = target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+      this.setState({
+          [name]:value}) ;
     }
     render() {
         return(
@@ -26,35 +29,31 @@ class Form extends Component {
                 <form className = 'form'>
                     <label>
                         Nome: 
-                        <input type='text' name='nome'></input>
+                        <input type='text' name='nome' value={this.state.nome} onChange={this.handleChange}></input>
                     </label>
 
                     <label>
                         Email: 
-                        <input type='text' name='email'></input>
+                        <input type='text' name='email' value={this.state.email} onChange={this.handleChange}></input>
                     </label>
 
 
                     <label>
                     Porque você quer cantar?
-                    <textarea name='motivoParaCantar'value={this.state.motivoParaCantar} onChange={this.handleTextAreaChange}></textarea>
+                    <textarea name='motivoParaCantar'value={this.state.motivoParaCantar} onChange={this.handleChange}></textarea>
                     </label>
                     idade:
-                    <input className = 'age'type='number' name='idade'>
+                    <input className = 'age'type='number' name='idade' value={this.state.idade} onChange={this.handleChange}>
                     </input>
                     <label>Você Já Canta?</label>
                     <label>
                           Sim
-                         <input type='checkbox' name='vaiComparecer'></input>
-                    </label>
-                    <label>
-                          Não
-                         <input type='checkbox' name='vaiComparecer'></input>
-                    </label>
+                         <input type='checkbox' name='vaiComparecer' value={this.state.vaiComparecer} onChange={this.handleChange}></input>
+                    </label>   
 
                     <label>
                         Onde você costumar cantar?
-                        <select name='ondeVocêCanta'>
+                        <select name='ondeVocêCanta' value={this.state.ondeVocêCanta} onChange={this.handleChange}>
                             <option value='igreja'>Igreja</option>
                             <option value='barzinho'>Barzinho</option>
                             <option value='chuveiro'>Chuveiro</option>
